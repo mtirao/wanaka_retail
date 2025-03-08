@@ -1,0 +1,70 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.37.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           wanaka-retail
+version:        0.1.0.0
+category:       Web
+homepage:       https://github.com/mtirao/wanaka_retail#readme
+author:         Marcos Tirao
+maintainer:     marcos.tirao@icloud.com
+copyright:      2025 Marcos Tirao
+license:        BSD3
+build-type:     Simple
+
+executable wanaka-retail
+  main-is: Main.hs
+  other-modules:
+      AuthenticationController
+      ErrorMessage
+      ItemDTO
+      ItemTrxDTO
+      Views
+      Item
+      ItemTransaction
+      Paths_wanaka_retail
+  hs-source-dirs:
+      ./
+      src/controllers
+      src/models
+      src/views
+      src/repositories
+  default-extensions:
+      DuplicateRecordFields
+      DeriveAnyClass
+      DerivingStrategies
+      OverloadedStrings
+      OverloadedRecordDot
+      TemplateHaskell
+      QuasiQuotes
+  ghc-options: -threaded -O2 -rtsopts -with-rtsopts=-N -Wno-deprecations -Wno-unused-imports -Wno-type-equality-out-of-scope -Wno-type-equality-requires-operators
+  build-depends:
+      MissingH
+    , aeson
+    , base >=4.14.3.0
+    , bytestring
+    , bytestring-conversion
+    , configurator
+    , hasql
+    , hasql-pool
+    , http-types
+    , jose-jwt
+    , lens
+    , lens-aeson
+    , postgresql-simple
+    , rel8
+    , resource-pool
+    , scotty
+    , text
+    , time
+    , transformers
+    , uuid
+    , wai
+    , wai-extra
+    , wai-middleware-static
+    , warp
+    , warp-tls
+    , wreq
+  default-language: Haskell2010
